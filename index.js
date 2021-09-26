@@ -12,7 +12,7 @@ function profitlosscalc(){
     var Quantity = Number(secondValue.value);
     var CurrentPrice = Number(thirdValue.value);
     var stockDiff = CurrentPrice - InitialPrice;
-    if(InitialPrice > CurrentPrice){
+    if(InitialPrice.value > 0 && Quantity.value > 0 && CurrentPrice.value){//if (intialprice.value >0 && stockqty.value>0 && currenprice.value >0)
         outputBox.style.display = "block";
         var stockDiff = (InitialPrice - CurrentPrice)*Quantity;
         var finalValue = (stockDiff/InitialPrice)*100;
@@ -27,7 +27,7 @@ function profitlosscalc(){
     }else{
         console.log(CurrentPrice);
         outputBox.style.display = "block";
-        outputBox.innerText = `NO PAIN NO GAIN (Atleast Enter values)`;
+        outputBox.innerText = `NO PAIN NO GAIN (Kindly Enter Interger Greater Than "0")`;
     }
 
    
